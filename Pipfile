@@ -1,0 +1,18 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+flask = "*"
+opencensus-ext-flask = "*"
+prometheus-client = "*"
+opencensus = "*"
+grpcio = "*"
+google-cloud-logging = "*"
+google-cloud-monitoring = "*"
+
+[requires]
+python_version = "3.7"

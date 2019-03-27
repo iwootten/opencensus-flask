@@ -1,0 +1,96 @@
+# Python temp file
+*.py[cod]
+__pycache__
+.pytest_cache
+
+# C extensions
+*.so
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib
+lib64
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.coverage.*
+coverage.xml
+.tox
+coverage/
+profiling/
+combined_profile.prof
+
+.cache
+
+*.log
+
+# Sphinx
+docs/_build
+
+.webassets-cache
+
+# Virtualenvs
+env
+env*
+venv
+
+# intellij
+.idea/
+*.ipr
+*.iml
+*.iws
+
+# VS Code
+.vscode
+
+.DS_Store
+
+node_modules/
+/static/
+tests/results
+tests/coverage
+tests/a11y
+
+**/_sprite.scss
+
+## OS X
+._*
+.Spotlight-V100
+.Trashes
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+newrelic.ini
+.application-version
+
+# Added to prevent committing coverage reports.
+htmlcov/
+
+*errorShots*
+
+data/cy
+
+keys.yml
+secrets.yml
+
+requirements.txt
+
+.screenshots
+
+# Ignore any generated pages for the functional tests
+tests/functional/generated_pages
