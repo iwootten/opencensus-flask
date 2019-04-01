@@ -9,10 +9,12 @@ verify_ssl = true
 flask = "*"
 opencensus-ext-flask = "*"
 prometheus-client = "*"
-opencensus = "*"
 grpcio = "*"
-google-cloud-logging = "*"
+google-cloud-trace = "*"
 google-cloud-monitoring = "*"
+opencensus = {git = "https://github.com/census-instrumentation/opencensus-python"}
+opencensus-ext-prometheus = {subdirectory = "contrib/opencensus-ext-prometheus", git = "https://github.com/census-instrumentation/opencensus-python"}
+opencensus-ext-stackdriver = {subdirectory = "contrib/opencensus-ext-stackdriver", git = "https://github.com/census-instrumentation/opencensus-python"}
 
 [requires]
 python_version = "3.7"
