@@ -15,12 +15,11 @@ GCP_EXPORTER_PROJECT = 'GCP_EXPORTER_PROJECT'
 
 
 class OpenCensusFlask(object):
+
     def __init__(self, app=None, blacklist_paths=None, exporter=None):
         self.app = app
         self.blacklist_paths = blacklist_paths
         self.exporter = exporter
-
-        stats_stats = stats.Stats()
 
         self.app.m_response_ms = measure_module.MeasureFloat("flask_response_time", "The request duration", "ms")
 
@@ -29,8 +28,6 @@ class OpenCensusFlask(object):
         self.app.key_status = tag_key_module.TagKey("status")
         # Create the error key
         self.app.key_error = tag_key_module.TagKey("error")
-
-        self.app.view_manager = stats_stats.view_manager
 
         if self.app is not None:
             self.init_app(app)
@@ -54,6 +51,11 @@ class OpenCensusFlask(object):
                 transport=transport)
         else:
             self.exporter = self.exporter(transport=transport)
+
+        stats_stats = stats.Stats()
+
+        self.app.stats_recorder = stats_stats.stats_recorder
+        self.app.view_manager = stats_stats.view_manager
 
         response_time_view = view.View("response_time", "The time it took to respond",
                                        [self.app.key_method, self.app.key_status, self.app.key_error],
