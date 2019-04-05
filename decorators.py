@@ -4,6 +4,7 @@ import time
 
 from opencensus.tags import tag_map as tag_map_module
 from opencensus.tags import tag_value as tag_value_module
+from opencensus.trace import execution_context
 
 
 def export_response_time(f):
@@ -25,5 +26,15 @@ def export_response_time(f):
         mmap.record(tmap)
 
         return response
+
+    return decorated_function
+
+
+def capture_trace(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        tracer = execution_context.get_opencensus_tracer()
+        with tracer.span(name=f.__name__) as span:
+            return f(*args, **kwargs)
 
     return decorated_function

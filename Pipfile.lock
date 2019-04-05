@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "ac7d1db8395b367e63da74cb7f8df5e2c301dc852ec39b00fdb0bdf9f9ba559f"
+            "sha256": "3ea5698a77c35fda6bfff073f7fd9389fafccc5ec75ce37c4bef1f5004d8e54a"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -75,6 +75,14 @@
                 "sha256:d85b1aaaf3bad9415ad1d8ee5eadce96d7007a82f13ce0a0629a003a11e83f29"
             ],
             "version": "==0.29.1"
+        },
+        "google-cloud-datastore": {
+            "hashes": [
+                "sha256:e00bddc03670be206ddcbc5c1cbda0acc51db963f0ff54189bd6710f8e93a4c9",
+                "sha256:f344af747955096fd9e412ad5937dfdac317e464cd126f84102652f60864dd1d"
+            ],
+            "index": "pypi",
+            "version": "==1.7.3"
         },
         "google-cloud-monitoring": {
             "hashes": [
@@ -192,24 +200,42 @@
         },
         "opencensus": {
             "git": "https://github.com/census-instrumentation/opencensus-python",
-            "ref": "d9a74a1b44963b638e52dd26980432d969a2d520"
+            "ref": "ab0b5880772648ee91b2ba8c31681605fc4a93b6"
         },
         "opencensus-ext-flask": {
-            "hashes": [
-                "sha256:cce417a1948c12fcaa1b95ee81f177cd29f1f2e428f9a427259e5745be44e069"
-            ],
-            "index": "pypi",
-            "version": "==0.1.0"
+            "git": "https://github.com/census-instrumentation/opencensus-python",
+            "ref": "ab0b5880772648ee91b2ba8c31681605fc4a93b6",
+            "subdirectory": "contrib/opencensus-ext-flask"
+        },
+        "opencensus-ext-google-cloud-clientlibs": {
+            "git": "https://github.com/census-instrumentation/opencensus-python",
+            "ref": "ab0b5880772648ee91b2ba8c31681605fc4a93b6",
+            "subdirectory": "contrib/opencensus-ext-google-cloud-clientlibs"
+        },
+        "opencensus-ext-grpc": {
+            "git": "https://github.com/census-instrumentation/opencensus-python",
+            "ref": "ab0b5880772648ee91b2ba8c31681605fc4a93b6",
+            "subdirectory": "contrib/opencensus-ext-grpc"
         },
         "opencensus-ext-prometheus": {
             "git": "https://github.com/census-instrumentation/opencensus-python",
-            "ref": "d9a74a1b44963b638e52dd26980432d969a2d520",
+            "ref": "ab0b5880772648ee91b2ba8c31681605fc4a93b6",
             "subdirectory": "contrib/opencensus-ext-prometheus"
+        },
+        "opencensus-ext-requests": {
+            "git": "https://github.com/census-instrumentation/opencensus-python",
+            "ref": "ab0b5880772648ee91b2ba8c31681605fc4a93b6",
+            "subdirectory": "contrib/opencensus-ext-requests"
         },
         "opencensus-ext-stackdriver": {
             "git": "https://github.com/census-instrumentation/opencensus-python",
-            "ref": "d9a74a1b44963b638e52dd26980432d969a2d520",
+            "ref": "ab0b5880772648ee91b2ba8c31681605fc4a93b6",
             "subdirectory": "contrib/opencensus-ext-stackdriver"
+        },
+        "opencensus-ext-zipkin": {
+            "git": "https://github.com/census-instrumentation/opencensus-python",
+            "ref": "ab0b5880772648ee91b2ba8c31681605fc4a93b6",
+            "subdirectory": "contrib/opencensus-ext-zipkin"
         },
         "prometheus-client": {
             "hashes": [

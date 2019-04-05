@@ -7,14 +7,19 @@ verify_ssl = true
 
 [packages]
 flask = "*"
-opencensus-ext-flask = "*"
 prometheus-client = "*"
-grpcio = "*"
 google-cloud-trace = "*"
 google-cloud-monitoring = "*"
 opencensus = {git = "https://github.com/census-instrumentation/opencensus-python"}
-opencensus-ext-prometheus = {subdirectory = "contrib/opencensus-ext-prometheus", git = "https://github.com/census-instrumentation/opencensus-python"}
-opencensus-ext-stackdriver = {subdirectory = "contrib/opencensus-ext-stackdriver", git = "https://github.com/census-instrumentation/opencensus-python"}
+opencensus-ext-prometheus = {git = "https://github.com/census-instrumentation/opencensus-python",subdirectory = "contrib/opencensus-ext-prometheus"}
+opencensus-ext-stackdriver = {git = "https://github.com/census-instrumentation/opencensus-python",subdirectory = "contrib/opencensus-ext-stackdriver"}
+opencensus-ext-zipkin = {git = "https://github.com/census-instrumentation/opencensus-python",subdirectory = "contrib/opencensus-ext-zipkin"}
+opencensus-ext-flask = {git = "https://github.com/census-instrumentation/opencensus-python",subdirectory = "contrib/opencensus-ext-flask"}
+opencensus-ext-requests = {git = "https://github.com/census-instrumentation/opencensus-python",subdirectory = "contrib/opencensus-ext-requests"}
+opencensus-ext-grpc = {git = "https://github.com/census-instrumentation/opencensus-python",subdirectory = "contrib/opencensus-ext-grpc"}
+opencensus-ext-google-cloud-clientlibs = {git = "https://github.com/census-instrumentation/opencensus-python",subdirectory = "contrib/opencensus-ext-google-cloud-clientlibs"}
+google-cloud-datastore = "*"
+grpcio = "*"
 
 [requires]
 python_version = "3.7"
